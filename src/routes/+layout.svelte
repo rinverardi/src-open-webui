@@ -55,6 +55,7 @@
 	import { getAllTags } from '$lib/apis/chats';
 	import { chatCompletion } from '$lib/apis/openai';
 	import { isTemporaryChatId } from '$lib/utils/chatId';
+	import { guardFetchArgs } from '$lib/utils/fetch-guard';
 	import {
 		addOpenAIConnection,
 		removeOpenAIConnection,
@@ -1064,6 +1065,8 @@
 	onMount(async () => {
 		const originalFetch = window.fetch.bind(window);
 		window.fetch = async (input, init) => {
+			[input, init] = guardFetchArgs(input, init);
+
 			const response = await originalFetch(input, init);
 
 			if (
