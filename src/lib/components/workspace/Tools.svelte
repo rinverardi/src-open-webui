@@ -296,9 +296,7 @@
 	<!-- LICENSE covers this Open WebUI browser-title identifier.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->
-	<title>
-		{$i18n.t('Tools')} / {$WEBUI_NAME}
-	</title>
+	<title>i7i Chat</title>
 </svelte:head>
 
 <ImportModal

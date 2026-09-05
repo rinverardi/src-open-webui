@@ -297,24 +297,7 @@
 	<!-- LICENSE covers this Open WebUI browser-title identifier.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->
-	{#if channel?.type === 'dm'}
-		<title
-			>{channel?.name.trim() ||
-				channel?.users.reduce((a, e, i, arr) => {
-					if (e.id === $user?.id) {
-						return a;
-					}
-
-					if (a) {
-						return `${a}, ${e.name}`;
-					} else {
-						return e.name;
-					}
-				}, '')} / Open WebUI</title
-		>
-	{:else}
-		<title>#{channel?.name ?? 'Channel'} / Open WebUI</title>
-	{/if}
+	<title>i7i Chat</title>
 </svelte:head>
 
 <div

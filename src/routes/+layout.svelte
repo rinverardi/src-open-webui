@@ -1260,7 +1260,6 @@
 			// visual, textual, symbolic identifiers, metadata, and surrounding UI.
 			// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 			// https://docs.openwebui.com/license.
-			await WEBUI_NAME.set(backendConfig.name);
 
 			if ($config) {
 				await setupSocket($config.features?.enable_websocket ?? true);
@@ -1376,7 +1375,7 @@
 	visual, textual, symbolic identifiers, metadata, and surrounding UI.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->
-	<title>{$WEBUI_NAME}</title>
+	<title>i7i Chat</title>
 
 	<meta name="apple-mobile-web-app-title" content={$WEBUI_NAME} />
 	<meta name="description" content={$WEBUI_NAME} />
